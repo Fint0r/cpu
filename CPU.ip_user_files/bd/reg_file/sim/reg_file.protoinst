@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"reg_file": {
+			"proto_instances": {
+			}
+		}
+	}
+}

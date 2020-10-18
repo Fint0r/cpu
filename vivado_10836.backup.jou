@@ -1,0 +1,105 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Sep 22 19:59:47 2020
+# Process ID: 10836
+# Current directory: D:/Projects/Xilinx/CPU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13188 D:\Projects\Xilinx\CPU\CPU.xpr
+# Log file: D:/Projects/Xilinx/CPU/vivado.log
+# Journal file: D:/Projects/Xilinx/CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projects/Xilinx/CPU/CPU.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source alu_tb.tcl
+run all
+add_bp {D:/Projects/Xilinx/CPU/CPU.srcs/sim_1/new/alu_tb.vhd} 53
+relaunch_sim
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+remove_bps -file {D:/Projects/Xilinx/CPU/CPU.srcs/sim_1/new/alu_tb.vhd} -line 53
+run all
+relaunch_sim
+clear
+relaunch_sim
+run all
+relaunch_sim
+close_sim
+launch_simulation
+source alu_tb.tcl
+run all
+close_sim

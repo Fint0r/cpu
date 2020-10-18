@@ -1,0 +1,2 @@
+reg_file_blk_mem_gen_0_0_sim_netlist.vhdl,vhdl,xil_defaultlib,d:/Projects/Xilinx/CPU/CPU.srcs/sources_1/bd/reg_file/ip/reg_file_blk_mem_gen_0_0/reg_file_blk_mem_gen_0_0_sim_netlist.vhdl,
+reg_file.vhd,vhdl,xil_defaultlib,../../../bd/reg_file/sim/reg_file.vhd,

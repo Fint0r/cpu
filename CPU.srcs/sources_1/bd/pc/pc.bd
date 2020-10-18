@@ -1,0 +1,130 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x84331916419590C8",
+      "device": "xc7a100tcsg324-1",
+      "name": "pc",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "c_counter_binary_0": ""
+    },
+    "ports": {
+      "CE_0": {
+        "type": "ce",
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "CLK_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "pc_CLK_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "10000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "L_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "LOAD_0": {
+        "type": "data",
+        "direction": "I",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "Q_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} DATA_WIDTH 16}",
+            "value_src": "ip_prop"
+          }
+        }
+      }
+    },
+    "components": {
+      "c_counter_binary_0": {
+        "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
+        "xci_name": "pc_c_counter_binary_0_0",
+        "parameters": {
+          "CE": {
+            "value": "true"
+          },
+          "Load": {
+            "value": "true"
+          },
+          "SSET": {
+            "value": "false"
+          }
+        }
+      }
+    },
+    "nets": {
+      "CE_0_1": {
+        "ports": [
+          "CE_0",
+          "c_counter_binary_0/CE"
+        ]
+      },
+      "CLK_0_1": {
+        "ports": [
+          "CLK_0",
+          "c_counter_binary_0/CLK"
+        ]
+      },
+      "L_0_1": {
+        "ports": [
+          "L_0",
+          "c_counter_binary_0/L"
+        ]
+      },
+      "LOAD_0_1": {
+        "ports": [
+          "LOAD_0",
+          "c_counter_binary_0/LOAD"
+        ]
+      },
+      "c_counter_binary_0_Q": {
+        "ports": [
+          "c_counter_binary_0/Q",
+          "Q_0"
+        ]
+      }
+    }
+  }
+}
