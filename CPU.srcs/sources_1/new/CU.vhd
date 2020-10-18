@@ -57,23 +57,39 @@ end CU;
 architecture Behavioral of CU is
     signal init_state: integer := 1;
     signal init_state_over: integer := 0;
-
+    
+    signal setting_reg: integer := 0;
+    signal reg_set: integer := 0;
+    
 begin
     
     
     process (clock)  begin
+        if falling_edge(clock) and setting_reg = 1 and reg_set = 0 then
+            pc_ce <= '0';
+            reg_set <= 1;
+            setting_reg <= 0;
+        end if;
+        
+        if falling_edge(clock) and reg_set = 1 then
+            pc_ce <= '1';
+            reg_set <= 0;
+            setting_reg <= 0;
+        end if;
+        
         if init_state = 1 then
             pc_ce <= '0';
             pc_load <= '0';
             pc_load_data <= x"0000";
-            
             init_state <= 0;
         elsif (init_state_over = 0) and rising_edge(clock) then
             pc_ce <= '1';
             init_state_over <= 1;
+            a_reg_load <= '1';
+            a_reg_data <= x"00";
         end if;
         
-        if rising_edge(clock)then
+        if rising_edge(clock) and init_state_over = 1 then
             case func is
                 when "0001" =>   -- A + B
                     a_reg_load <= '1';
@@ -81,6 +97,7 @@ begin
                     b_reg_load <= '1';
                     b_reg_data <= "00000111";
                     alu_addr <= func;
+                    setting_reg <= 1;
                 when "1111" =>
                     pc_ce <= '0';
                 when "0000" =>
